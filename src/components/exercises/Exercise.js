@@ -43,12 +43,7 @@ class Exercise extends Component {
         }
     }
 
-    UpdateExerciseRow = () => {
-        try {
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    
 
     renderTheExerciseListing = (exerciseListArray) => {
         return exerciseListArray.map( (exerciseObject)  => {
@@ -59,11 +54,7 @@ class Exercise extends Component {
                         <td>{ exerciseObject.description }</td>
                         <td>{ moment(exerciseObject.createdAt).format("D MMM, YYYY") }</td>
                         <td>{ exerciseObject.status }</td>
-                        <td><button value={exerciseObject._id} className="btn btn-success btn-xs" onClick={
-                            (e) => {
-                                this.UpdateExerciseRow(e.target.value)
-                            }
-                        }>Update</button></td>
+                        <td><button value={exerciseObject._id} className="btn btn-success btn-xs">Update</button></td>
                     </tr>
                 </>
             )
