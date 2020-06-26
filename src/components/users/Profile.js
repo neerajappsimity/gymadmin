@@ -222,7 +222,7 @@ class Profile extends Component {
                                 </div>
                                 <div className="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                                     <ol className="breadcrumb">
-                                        <li><a href="/">Dashboard</a></li>
+                                        <li><Link to="/">Home</Link></li>
                                         <li className="active">Profile Page</li>
                                     </ol>
                                 </div>
