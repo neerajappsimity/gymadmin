@@ -5,6 +5,7 @@ import Footer from '../Footer'
 import Services from '../../utility/core.api'
 import moment from 'moment'
 import {button} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 class Exercise extends Component {
 
