@@ -126,7 +126,7 @@ class Profile extends Component {
                     if(response.data.msg === 'profile successfully updated'){
                         this.getprofiledata()
                         // this.renderTheProfileImage(this.state.profile)
-                        // window.location.reload();
+                        window.location.reload();
                         // this.props.history.push('/profile')
                     }
                 }
