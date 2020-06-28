@@ -146,6 +146,81 @@ class Services {
         }
     }
 
+    addExercise = async(token) => {
+        try {
+            let data = await Axios.post(this.url+URLS.addExercise, this.params,{
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "token": token
+                }
+            })
+            return data
+
+        } catch (e) {
+            console.log('error is', e)
+            if(e.response.status !== 404){
+                throw e.response
+            }
+            throw e.reponse
+        }
+    }
+
+    updateExercise = async(token) => {
+        try {
+            let data = await Axios.post(this.url+URLS.updateExercise, this.params,{
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "token": token
+                }
+            })
+            return data
+
+        } catch (e) {
+            console.log('error is', e)
+            if(e.response.status !== 404){
+                throw e.response
+            }
+            throw e.reponse
+        }
+    }
+
+    exerciseView = async(token) => {
+        try {
+            let data = await Axios.post(this.url+URLS.exerciseView, this.params,{
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "token": token
+                }
+            })
+            return data
+
+        } catch (e) {
+            console.log('error is', e)
+            if(e.response.status !== 404){
+                throw e.response
+            }
+            throw e.reponse
+        }
+    }
+
+    changePassword = async(token) => {
+        try {
+            let data = await Axios.post(this.url+URLS.changePassword, this.params,{
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "token": token
+                }
+            })
+            return data
+
+        } catch (e) {
+            if(e.response.status !== 404){
+                throw e.response
+            }
+            throw e.reponse
+        }
+    }
+
 }
 
 

@@ -6,6 +6,8 @@ import Services from '../../utility/core.api'
 import moment from 'moment'
 import {button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Task extends Component {
 
@@ -52,7 +54,7 @@ class Task extends Component {
         if(response.status === 200)
         {
             this.tasklist()
-            alert(response.data.msg)
+            toast.warning(response.data.msg);
         }
         
     }
@@ -90,6 +92,7 @@ class Task extends Component {
             <div>
                 <Header />
                 <Sidebar />
+                <ToastContainer />
                 <div id="page-wrapper">
                     <div className="container-fluid">
                         <div className="row bg-title">

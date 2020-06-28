@@ -4,7 +4,6 @@ import Sidebar from '../Sidebar'
 import Footer from '../Footer'
 import Services from '../../utility/core.api'
 import moment from 'moment'
-import {button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 class Exercise extends Component {
@@ -19,6 +18,7 @@ class Exercise extends Component {
     componentDidMount(){
         this.checkIfTokenAvailable()
         this.exerciselist()
+
     }
 
     checkIfTokenAvailable = async() => {
@@ -44,18 +44,17 @@ class Exercise extends Component {
         }
     }
 
-    
 
     renderTheExerciseListing = (exerciseListArray) => {
         return exerciseListArray.map( (exerciseObject)  => {
             return(
                 <>
                     <tr>
-                        <td>{ exerciseObject.title }</td>
+                        <td><img src={ exerciseObject.logo } width="70px" height="40px"/> { exerciseObject.title }</td>
                         <td>{ exerciseObject.description }</td>
                         <td>{ moment(exerciseObject.createdAt).format("D MMM, YYYY") }</td>
-                        <td>{ exerciseObject.status }</td>
-                        <td><button value={exerciseObject._id} className="btn btn-success btn-xs">Update</button></td>
+                        {/* <td>{ exerciseObject.status }</td> */}
+                        <td><Link className="btn btn-primary btn-xs" to={`/updateexercise/${exerciseObject._id}`}>Update</Link></td>
                     </tr>
                 </>
             )
@@ -90,7 +89,11 @@ class Exercise extends Component {
                                         <h3 className="box-title">Display All Excercis</h3>
                                     </div>
                                     <div className="col-sm-4">
-                                    <button className="btn btn-info btn-xs pull-right">Add Exercise</button>
+                                    <button className="btn btn-info btn-xs pull-right" onClick={
+                                        () => {
+                                            this.props.history.push('/addexercise')
+                                        }
+                                    }>Add Exercise</button>
                                     </div>
                                 </div>
                                 {/* <p className="text-muted">Add class <code>.table</code></p> */}
@@ -101,7 +104,7 @@ class Exercise extends Component {
                                                 <th>Title</th>
                                                 <th>Description</th>
                                                 <th>Created Date</th>
-                                                <th>Status</th>
+                                                {/* <th>Status</th> */}
                                                 <th>Action</th>
                                             </tr>
                                         </thead>

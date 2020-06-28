@@ -23,6 +23,9 @@ class Sidebar extends Component {
                             <Link to="/profile" className="waves-effect"><i className="fa fa-user fa-fw" aria-hidden="true"></i>Profile</Link>
                         </li>
                         <li>
+                            <Link to="/changepassword" className="waves-effect"><i className="fa fa-user fa-fw" aria-hidden="true"></i>Change Password</Link>
+                        </li>
+                        <li>
                             <Link to="/users" className="waves-effect"><i className="fa fa-user fa-fw" aria-hidden="true"></i>All Users</Link>
                         </li>
                         <li>

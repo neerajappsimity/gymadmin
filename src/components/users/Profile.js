@@ -3,10 +3,12 @@ import Header from '../Header'
 import Sidebar from '../Sidebar'
 import Services from '../../utility/core.api'
 import Footer from '../Footer'
-import moment from 'moment'
+// import moment from 'moment'
 import { Form, Button } from 'react-bootstrap'
 import FileBase64 from 'react-file-base64';
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 class Profile extends Component {
@@ -118,11 +120,14 @@ class Profile extends Component {
                 const token = localStorage.getItem("token")
                 const params = { newName: this.state.name, newAddress: this.state.address, newPhone: this.state.phone, newPicture: this.state.picture }
                 const response = await new Services(params).editProfile(token)
-                alert(response.data.msg)
+                toast.warning(response.data.msg);
+                // console.log('res', params)
                 if(response.status === 200){
-                    if(response.data.msg === 'Successfully updated'){
+                    if(response.data.msg === 'profile successfully updated'){
                         this.getprofiledata()
-                        // window.location.reload(false);
+                        // this.renderTheProfileImage(this.state.profile)
+                        // window.location.reload();
+                        // this.props.history.push('/profile')
                     }
                 }
             }
@@ -214,6 +219,7 @@ class Profile extends Component {
                 <>
                     <Header />
                     <Sidebar />
+                    <ToastContainer />
                     <div id="page-wrapper">
                         <div className="container-fluid">
                             <div className="row bg-title">

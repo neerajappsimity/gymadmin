@@ -7,7 +7,11 @@ const URLS = {
     deleteTask: '/admin/deleteTask',
     getProfile : '/admin/getProfile',
     editProfile: '/admin/editProfile',
-    exerciseList: '/admin/exerciseList'
+    exerciseList: '/admin/exerciseList',
+    addExercise: '/admin/addExercise',
+    updateExercise: '/admin/updateExercise',
+    exerciseView: '/admin/exerciseView',
+    changePassword: '/admin/changePassword'
 
 }
 

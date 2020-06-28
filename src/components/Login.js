@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Services from '../utility/core.api'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 class Login extends Component {
@@ -40,8 +42,8 @@ class Login extends Component {
             const response = await new Services(params).loginAdmin();
             // console.log('response', response)
             if(response.status === 200){
-                console.log("repsonse after login is", response.data.msg)
-                alert(response.data.msg)
+                // console.log("repsonse after login is", response.data.msg)
+                toast.warning(response.data.msg);
                 if(response.data.status){
                     // console.log('token', response.data.token)
                     localStorage.setItem("token", response.data.token)
@@ -60,6 +62,8 @@ class Login extends Component {
 
     render() {
         return (
+            <>
+            <ToastContainer />
             <div className="container-fluid page-body-wrapper full-page-wrapper">
                 <div className="content-wrapper d-flex align-items-center auth">
                 <div className="row flex-grow">
@@ -103,6 +107,7 @@ class Login extends Component {
                 </div>
                 </div>
             </div>
+            </>
         )
     }
 

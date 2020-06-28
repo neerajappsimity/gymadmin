@@ -9,8 +9,8 @@ class Header extends Component {
                     <div className="top-left-part">
                         <Link className="logo" to="/">
                             <b>
-                                <img src="logo.jpg" alt="home" className="dark-logo" height="50px" width="50px" />
-                                <img src="logo.jpg" alt="home" className="light-logo" height="50px" width="50px" />
+                                <img src={window.location.origin+ '/logo.jpg'} alt="home" className="dark-logo" height="50px" width="50px" />
+                                <img src={window.location.origin+ '/logo.jpg'} alt="home" className="light-logo" height="50px" width="50px" />
                             </b>
                             <span>
                                 Admin Panel
@@ -22,7 +22,7 @@ class Header extends Component {
                         <span className="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"><i className="fa fa-bars"></i></span>
                     </li>
                     <li>
-                        {/* <img src="" alt="user-img" width="36" className="img-circle"> hdjk</img><b className="hidden-xs">Steave</b> */}
+                        <b className="hidden-xs">Steave</b>
                     </li>
                     </ul>
                 </div>
