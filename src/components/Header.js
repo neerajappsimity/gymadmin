@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
-import { Form, Button } from 'react-bootstrap'
 import Services from '../utility/core.api'
 
 class Header extends Component {
@@ -39,16 +38,16 @@ class Header extends Component {
         // console.log('test', profileObj)
         return (
             <>
-                <ul class="nav navbar-top-links navbar-right pull-right">
+                <ul className="nav navbar-top-links navbar-right pull-right">
                         <li>
-                            <a className="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"
-                                href="javascript:void(0)"><i className="fa fa-bars"></i></a>
+                            <Link className="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"
+                                to="/"><i className="fa fa-bars"></i></Link>
                         </li>
-                        <li class="dropdown">
-                            <Link to="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src={profileObj.picture} alt="user-img"
-                                    width="36" className="img-circle"></img> <b className="hidden-xs">{profileObj.name}</b><span class="caret"></span></Link>
-                            <ul class="dropdown-menu">
-                                <li><Link onClick={this.Logout}>Logout</Link></li>
+                        <li className="dropdown">
+                            <Link to="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src={profileObj.picture} alt="user-img"
+                                    width="36" className="img-circle"></img> <b className="hidden-xs">{profileObj.name}</b><span className="caret"></span></Link>
+                            <ul className="dropdown-menu">
+                                <li><Link to="/" onClick={this.Logout}>Logout</Link></li>
                             </ul>
                         </li>
                     </ul>

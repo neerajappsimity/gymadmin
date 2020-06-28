@@ -50,7 +50,7 @@ class Exercise extends Component {
             return(
                 <>
                     <tr>
-                        <td><img src={ exerciseObject.logo } width="70px" height="40px"/> { exerciseObject.title }</td>
+                        <td><img src={ exerciseObject.logo } width="70px" height="40px" alt="exercise picture" /> { exerciseObject.title }</td>
                         <td>{ exerciseObject.description }</td>
                         <td>{ moment(exerciseObject.createdAt).format("D MMM, YYYY") }</td>
                         {/* <td>{ exerciseObject.status }</td> */}
