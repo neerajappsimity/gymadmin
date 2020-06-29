@@ -18,14 +18,14 @@ class App extends Component{
   render() {
     return (
         <BrowserRouter>
-        <Route exact path='/' component={Login} />
-        <Route exact path='/users' component={User} />
-        <Route exact path='/tasks' component={Task} />
-        <Route exact path='/profile' component={Profile} />
-        <Route exact path='/exercise' component={Exercise} />
-        <Route exact path='/addexercise' component={AddExercise} />
-        <Route exact path='/updateexercise/:exerciseId' component={UpdateExercise} />
-        <Route exact path='/changepassword' component={ChangePassword} />
+        <Route exact path='/gymadmin' component={Login} />
+        <Route exact path='/gymadmin/users' component={User} />
+        <Route exact path='/gymadmin/tasks' component={Task} />
+        <Route exact path='/gymadmin/profile' component={Profile} />
+        <Route exact path='/gymadmin/exercise' component={Exercise} />
+        <Route exact path='/gymadmin/addexercise' component={AddExercise} />
+        <Route exact path='/gymadmin/updateexercise/:exerciseId' component={UpdateExercise} />
+        <Route exact path='/gymadmin/changepassword' component={ChangePassword} />
         </BrowserRouter>
     );
   }
