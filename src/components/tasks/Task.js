@@ -60,12 +60,11 @@ class Task extends Component {
     }
 
     renderTheTaskListing = (taskListArray) => {
-        return taskListArray.map( (current) => {
+        return taskListArray.map( (current, index) => {
 
-            console.log(current.user.picture)
+            // console.log(current.user.picture)
             return (
-                <>
-                    <tr>
+                    <tr key={index}>
                         <td> <img src={ (current.user.picture) ? current.user.picture : 'image/dummy.png' } className="mr-2" alt="" height="50px" width="50px"/> {current.user.name }</td>
                         <td><img src={ (current.sender.picture) ? current.sender.picture : 'image/dummy.png' } className="mr-2" alt="" height="50px" width="50px"/> {current.sender.name }</td>
                         <td><b>{ current.title.toUpperCase() }</b></td>
@@ -80,7 +79,6 @@ class Task extends Component {
                             }
                         }>Delete</button></td>
                     </tr>
-                </>
             )
         })
     }

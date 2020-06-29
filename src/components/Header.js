@@ -47,6 +47,7 @@ class Header extends Component {
                             <Link to="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src={profileObj.picture} alt="user-img"
                                     width="36" className="img-circle"></img> <b className="hidden-xs">{profileObj.name}</b><span className="caret"></span></Link>
                             <ul className="dropdown-menu">
+                                <li><Link to="/changepassword">Change Password</Link></li>
                                 <li><Link to="/" onClick={this.Logout}>Logout</Link></li>
                             </ul>
                         </li>

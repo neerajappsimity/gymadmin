@@ -17,7 +17,7 @@ class User extends Component {
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.checkIfTokenAvailable()
         this.userlist()
     }
@@ -48,24 +48,21 @@ class User extends Component {
         return userListArray.map( (current, index) => {
             // console.log('index', index)
             return (
-                <>
                     <tr key={index}>
                         <td>
-                        <img src={ (current.picture == null) ? 'image/dummy.png' : current.picture } className="mr-2" alt={current.name} height="50px" width="50px"/><b> {current.name}</b></td>
+                        <img src={ current.picture } className="mr-2" alt={current.name} height="50px" width="50px"/><b><code> {current.name} </code> </b></td>
                         <td>{ current.email }</td>
                         <td>{ current.phone }</td>
                         <td>{ current.role }</td>
                         <td>{ current.address }</td>
                         <td>{ moment(current.createdAt).format("D MMM, YYYY") }</td>
                     </tr>
-                </>
             )
         })
     }
 
     render(){
         return (
-            <>
             <div>
             <Header />
             <Sidebar />
@@ -86,12 +83,11 @@ class User extends Component {
                             <div className="col-sm-12">
                                 <div className="white-box">
                                     <h3 className="box-title">Display All Users</h3>
-                                    {/* <p className="text-muted">Add class <code>.table</code></p> */}
                                     <div className="table-responsive">
                                         <table className="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
+                                                    <th><code>Name</code></th>
                                                     <th>Email</th>
                                                     <th>Phone Number</th>
                                                     <th>Role</th>
@@ -111,7 +107,6 @@ class User extends Component {
                     <Footer/>
                 </div>          
             </div>
-            </>
 
         )
     }

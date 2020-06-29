@@ -70,7 +70,6 @@ class AddExercise extends Component {
 
     renderTheExerciseForm = (ExerciseObj) => {
         return (
-            <>
                 <div className="form-horizontal form-material">
                     <Form.Group controlId="formBasicName">
                         <label className="col-md-12">
@@ -111,13 +110,12 @@ class AddExercise extends Component {
                             Save
                     </Button>
                 </div>
-            </>
         )
     }
 
     render() {
         return (
-            <>
+            <div>
             <Header />
             <Sidebar />
             <ToastContainer />
@@ -154,7 +152,7 @@ class AddExercise extends Component {
                 </div>
                 <Footer/>
             </div>
-            </>
+            </div>
         )
     }
 
