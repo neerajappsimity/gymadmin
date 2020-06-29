@@ -14,7 +14,7 @@ class Login extends Component {
         }
     }
 
-    componentWillMount = async() => {
+    componentDidMount = async() => {
         if(await localStorage.getItem('token')){
                 this.props.history.push('/users')
         }

@@ -62,7 +62,6 @@ class Task extends Component {
     renderTheTaskListing = (taskListArray) => {
         return taskListArray.map( (current) => {
 
-            console.log(current.user.picture)
             return (
                 <>
                     <tr>

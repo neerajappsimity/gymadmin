@@ -15,7 +15,7 @@ class Header extends Component {
         localStorage.removeItem("token")
         window.location.reload()
     }
-    componentWillMount(){
+    componentDidMount(){
         this.getprofiledata()
     }
 
@@ -23,7 +23,7 @@ class Header extends Component {
         try {
             const token = localStorage.getItem("token");
             const response = await new Services().getProfile(token)
-            console.log('response', response)
+            // console.log('response', response)
             if(response.status === 200){
                 this.setState({
                     profile : response.data.data

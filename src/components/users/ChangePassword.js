@@ -24,7 +24,7 @@ class ChangePassword extends Component {
         }
         
 
-        componentWillMount(){
+        componentDidMount(){
             this.checkIfTokenAvailable()
 
 

@@ -17,7 +17,7 @@ class User extends Component {
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.checkIfTokenAvailable()
         this.userlist()
     }
@@ -50,7 +50,7 @@ class User extends Component {
                 <>
                     <tr>
                         <td>
-                        <img src={ (current.picture == null) ? 'image/dummy.png' : current.picture } className="mr-2" alt="user picture" height="50px" width="50px"/><b> {current.name}</b></td>
+                        <img src={ (current.picture == null) ? 'image/dummy.png' : current.picture } className="mr-2" alt={current.name} height="50px" width="50px"/><b> {current.name}</b></td>
                         <td>{ current.email }</td>
                         <td>{ current.phone }</td>
                         <td>{ current.role }</td>
