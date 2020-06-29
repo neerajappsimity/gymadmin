@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/gymadmin/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/gymadmin/static/js/main.1de1373d.chunk.js",
-    "main.js.map": "/gymadmin/static/js/main.1de1373d.chunk.js.map",
+    "main.js": "/gymadmin/static/js/main.644f2608.chunk.js",
+    "main.js.map": "/gymadmin/static/js/main.644f2608.chunk.js.map",
     "runtime-main.js": "/gymadmin/static/js/runtime-main.e3213f35.js",
     "runtime-main.js.map": "/gymadmin/static/js/runtime-main.e3213f35.js.map",
     "static/css/2.d34346ea.chunk.css": "/gymadmin/static/css/2.d34346ea.chunk.css",
-    "static/js/2.2296bd66.chunk.js": "/gymadmin/static/js/2.2296bd66.chunk.js",
-    "static/js/2.2296bd66.chunk.js.map": "/gymadmin/static/js/2.2296bd66.chunk.js.map",
+    "static/js/2.aa81e6ce.chunk.js": "/gymadmin/static/js/2.aa81e6ce.chunk.js",
+    "static/js/2.aa81e6ce.chunk.js.map": "/gymadmin/static/js/2.aa81e6ce.chunk.js.map",
     "index.html": "/gymadmin/index.html",
-    "precache-manifest.280386e84628aa404092b1d7839e4c33.js": "/gymadmin/precache-manifest.280386e84628aa404092b1d7839e4c33.js",
+    "precache-manifest.2762fe4e2f394896a6efb5b6dbde25e8.js": "/gymadmin/precache-manifest.2762fe4e2f394896a6efb5b6dbde25e8.js",
     "service-worker.js": "/gymadmin/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/gymadmin/static/css/2.d34346ea.chunk.css.map",
     "static/css/main.5ecd60fb.chunk.css.map": "/gymadmin/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.2296bd66.chunk.js.LICENSE.txt": "/gymadmin/static/js/2.2296bd66.chunk.js.LICENSE.txt"
+    "static/js/2.aa81e6ce.chunk.js.LICENSE.txt": "/gymadmin/static/js/2.aa81e6ce.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e3213f35.js",
     "static/css/2.d34346ea.chunk.css",
-    "static/js/2.2296bd66.chunk.js",
+    "static/js/2.aa81e6ce.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.1de1373d.chunk.js"
+    "static/js/main.644f2608.chunk.js"
   ]
 }
