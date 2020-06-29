@@ -25,7 +25,7 @@ class Profile extends Component {
             }
         }
 
-        componentDidMount(){
+        componentWillMount(){
             this.checkIfTokenAvailable()
             this.getprofiledata()
         }
@@ -45,7 +45,7 @@ class Profile extends Component {
             try {
                 const token = localStorage.getItem("token");
                 const response = await new Services().getProfile(token)
-                // console.log('response', response)
+                console.log('response', response)
                 if(response.status === 200){
                     this.setState({
                         // profile : response.data.data

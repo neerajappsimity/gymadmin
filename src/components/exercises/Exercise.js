@@ -46,17 +46,15 @@ class Exercise extends Component {
 
 
     renderTheExerciseListing = (exerciseListArray) => {
-        return exerciseListArray.map( (exerciseObject)  => {
+        return exerciseListArray.map( (exerciseObject, index)  => {
             return(
-                <>
-                    <tr>
+                    <tr key={index}>
                         <td><img src={ exerciseObject.logo } width="70px" height="40px" alt={ exerciseObject.title } /> { exerciseObject.title }</td>
                         <td>{ exerciseObject.description }</td>
                         <td>{ moment(exerciseObject.createdAt).format("D MMM, YYYY") }</td>
                         {/* <td>{ exerciseObject.status }</td> */}
                         <td><Link className="btn btn-primary btn-xs" to={`/updateexercise/${exerciseObject._id}`}>Update</Link></td>
                     </tr>
-                </>
             )
         })
         

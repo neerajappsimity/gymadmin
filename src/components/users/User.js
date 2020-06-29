@@ -17,7 +17,7 @@ class User extends Component {
         }
     }
 
-    componentDidMount(){
+    componentWillMount(){
         this.checkIfTokenAvailable()
         this.userlist()
     }
@@ -45,10 +45,11 @@ class User extends Component {
         }
     }
     renderTheUserListingData = (userListArray) => {
-        return userListArray.map( (current) => {
+        return userListArray.map( (current, index) => {
+            // console.log('index', index)
             return (
                 <>
-                    <tr>
+                    <tr key={index}>
                         <td>
                         <img src={ (current.picture == null) ? 'image/dummy.png' : current.picture } className="mr-2" alt={current.name} height="50px" width="50px"/><b> {current.name}</b></td>
                         <td>{ current.email }</td>

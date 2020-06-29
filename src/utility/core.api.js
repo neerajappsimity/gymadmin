@@ -12,7 +12,7 @@ class Services {
     loginAdmin = async() => {
         try {
             let data = await Axios.post(this.url+URLS.loginAdmin,this.params,{/** token */})
-            // console.log('data', data)
+            console.log('data', data)
             return data
             
         } catch (e) {
